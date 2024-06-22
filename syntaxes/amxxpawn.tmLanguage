@@ -39,7 +39,7 @@
             <string>(?x)
                 (default)\s*:|                                          #ignore "default:"
                 \?(?!.*\().*?(?'ident'[A-Za-z_@][A-Za-z0-9_@]*+)\s*:|   #ignore "? identifier :"
-                (case)\s+(\g'ident')\s*:|                               #ignore "case identifier:"
+                (case)\s+(?:[A-Za-z0-9_@]+\s*\,\s*)*(\g'ident')\s*:|    #ignore "case identifier:"
                 :\s*\g'ident'\s*|                                       #ignore ":identifier:"
                 (
                     {(?:\s*\g'ident'\s*(?:\,)?)+}\s*:|                  #a list of tags or
